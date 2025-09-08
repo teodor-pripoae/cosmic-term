@@ -48,8 +48,8 @@ pub fn key_binds() -> HashMap<KeyBind, Action> {
 
     // Ctrl+Tab and Ctrl+Shift+Tab cycle through tabs
     // Ctrl+Tab is not a special key for terminals and is free to use
-    bind!([Ctrl], Key::Named(Named::Tab), TabNext);
-    bind!([Ctrl, Shift], Key::Named(Named::Tab), TabPrev);
+    bind!([Alt, Shift], Key::Character("[".into()), TabNext);
+    bind!([Alt, Shift], Key::Character("]".into()), TabPrev);
 
     // Ctrl+Shift+# activates tabs by index
     bind!([Ctrl, Shift], Key::Character("1".into()), TabActivate0);
